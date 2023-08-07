@@ -1,0 +1,21 @@
+.card img{
+    width: 200px;
+    transition: box-shadow 0.3s;
+}
+
+.card a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.card img:hover{
+    box-shadow: 0px 0px 15px #fff;
+}
+
+.card{
+    padding: 1rem;
+    background-color: #2d2d2d;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: sans-serif;
+}
