@@ -1,10 +1,11 @@
 import axios from "axios"
 import getPokemons from "../../APIs/getPokemons"
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import Card from "../../Components/Card/Card";
 import "./Home.css"
-
 const Home = () => {
+
+  const regex = useRef(/\/(\d+)\//);
 
   const [pokemons, setPokemons] = useState();
 
@@ -16,9 +17,9 @@ const Home = () => {
     <>
       <div id="cards">
 
-        {pokemons && pokemons.results.map((elem, idx) => {
+        {pokemons && pokemons.results.map((elem,idx) => {
           return (
-          <Card key={idx} id={idx} name={elem.name} />
+          <Card key={idx} id={elem.url.match(regex.current)[1]} name={elem.name} />
           )
         })}
 

@@ -1,4 +1,4 @@
-#PokeDex
+# PokeDex
 
 - Basic Poke App
 - Do, npm i

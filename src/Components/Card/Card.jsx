@@ -3,12 +3,11 @@ import getPokemonPic from "../../APIs/getPokemonPic"
 import "./Card.css"
 
 const Card = ({id, name}) => {
-    id = id+1
   return (
     <div className="card">
         <Link to={`/poke/${id}/${name}`}>
-            <img src={getPokemonPic(id)} alt={name} />
-            <p>{name + " " + id}</p>
+            <img width={200} height={200} src={getPokemonPic(id)} alt={name} />
+            <p>{name}</p>
         </Link>
     </div>
   )
