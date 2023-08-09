@@ -4,6 +4,7 @@ import { useContext, useEffect, useRef } from "react"
 import Card from "../../Components/Card/Card";
 import PageContext from "../../Context/PageContext";
 import "./Home.css"
+import Pagination from "../../Components/Pagination/Pagination";
 const Home = () => {
 
   const regex = useRef(/\/(\d+)\//);
@@ -26,6 +27,7 @@ const Home = () => {
         })}
 
       </div>
+      <Pagination />
     </>
   )
 }
