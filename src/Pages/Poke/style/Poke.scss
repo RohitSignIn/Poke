@@ -1,5 +1,7 @@
-.details{
-    padding: 2rem;
+#pokeCon{
+    margin-top: 6rem;
+    .details{
+        padding: 2rem;
     width: 100%;
     margin-top: 2px;
     background-color: #2d2d2d;
@@ -35,4 +37,5 @@
             }
         }
     }
+}
 }

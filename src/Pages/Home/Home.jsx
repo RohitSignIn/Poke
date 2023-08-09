@@ -1,17 +1,19 @@
 import axios from "axios"
 import getPokemons from "../../APIs/getPokemons"
-import { useEffect, useRef, useState } from "react"
+import { useContext, useEffect, useRef } from "react"
 import Card from "../../Components/Card/Card";
+import PageContext from "../../Context/PageContext";
 import "./Home.css"
 const Home = () => {
 
   const regex = useRef(/\/(\d+)\//);
 
-  const [pokemons, setPokemons] = useState();
+  const {pokemons, setPokemons} = useContext(PageContext);
 
   useEffect(() => {
-    axios.get(getPokemons()).then((res) => setPokemons({next: res.data.next, previous: null, results: res.data.results}))
+    axios.get(getPokemons(1)).then((res) => setPokemons({next: res.data.next, prev: res.data.previous, results: res.data.results}))
   }, [])
+  
 
   return (
     <>

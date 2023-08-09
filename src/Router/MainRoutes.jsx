@@ -6,7 +6,7 @@ const MainRoutes = () => {
   return (
     <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/poke/:id/:name?" element={<Poke />} />
+        <Route path="/poke/:name" element={<Poke />} />
     </Routes>
   )
 }

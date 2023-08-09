@@ -6,27 +6,21 @@ import getPokemon from "../../APIs/getPokemon";
 import "./style/Poke.css"
 
 const Poke = () => {
-  let {id, name} = useParams();
-  if(!name){
-    name = id;
-  }
+  let {name} = useParams();
 
-  console.log(id, name)
-  
   const [pokemon, setPokemon] = useState();
 
   useEffect(() => {
-    axios.get(getPokemon(id)).then((res) => setPokemon(res.data))
+    axios.get(getPokemon(name)).then((res) => setPokemon(res.data))
   }, [])
-
-  console.log(pokemon);
 
   return (
     <>
-      <div>
-        <Card id={id} name={name} />
+      <div id="pokeCon">
         {
-        pokemon && <div className="details">
+        pokemon && <>
+        <Card id={pokemon.id} name={name} />
+        <div className="details">
           <div id="abilities">
             <p>Abilities</p>
               <div>
@@ -44,6 +38,7 @@ const Poke = () => {
             </div>
             </div>
           </div>
+        </>
         }
       </div>
     </>

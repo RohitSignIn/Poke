@@ -8,16 +8,23 @@ const Header = () => {
   const navigate = useNavigate();
 
   return (
-    <div id="header">
-        <div id="logo">
+    <header id="header">
+        <div id="logo" onClick={() => navigate("/")}>
           <img width={30} height={30} src="/images/pokeball.png" alt="" />
           <p>Poke</p>
         </div>
         <div>
-          <input type="text" placeholder="Search pokemon..." onChange={(e) => setSearch(e.target.value)} />
+          <input 
+            type="text" 
+            placeholder="Search pokemon..." 
+            onChange={(e) => setSearch(e.target.value)} 
+            onKeyDown={(e) => {
+              if(e.key === "Enter") navigate(`/poke/${search}`)
+            }}
+          />
           <button onClick={() => navigate(`/poke/${search}`)}>Search</button>
         </div>
-    </div>
+    </header>
   )
 }
 

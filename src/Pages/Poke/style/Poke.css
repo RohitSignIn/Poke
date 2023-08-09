@@ -1,4 +1,7 @@
-.details {
+#pokeCon {
+  margin-top: 6rem;
+}
+#pokeCon .details {
   padding: 2rem;
   width: 100%;
   margin-top: 2px;
@@ -9,22 +12,22 @@
   font-size: 1.2rem;
   gap: 2rem;
 }
-.details > div {
+#pokeCon .details > div {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-.details > div p {
+#pokeCon .details > div p {
   font-size: 1.6rem;
   font-weight: 400;
   color: #fff;
 }
-.details > div > div {
+#pokeCon .details > div > div {
   display: flex;
   flex-wrap: wrap;
   gap: 0.6rem 1rem;
 }
-.details > div > div span {
+#pokeCon .details > div > div span {
   background-color: tomato;
   color: #2d2d2d;
   padding: 0.3rem 0.6rem;
@@ -33,6 +36,6 @@
   cursor: pointer;
   transition: transform 0.3s;
 }
-.details > div > div span:hover {
+#pokeCon .details > div > div span:hover {
   transform: scale(1.1);
 }/*# sourceMappingURL=Poke.css.map */
