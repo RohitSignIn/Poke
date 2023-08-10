@@ -12,7 +12,7 @@ const Poke = () => {
 
   useEffect(() => {
     axios.get(getPokemon(name)).then((res) => setPokemon(res.data))
-  }, [])
+  }, [name])
 
   return (
     <>
